@@ -57,9 +57,14 @@ Gestion des joueurs, matchs, classements, inscriptions et paiements.
 - [x] Pages d'auth (`/login`, `/signup`) + Server Actions (`login`, `signup`, `signout`)
 
 ### En cours / À faire
+- [ ] Page d'accueil `/` — landing page publique (hero, concept, à propos, CTA inscription)
 - [ ] Page `/dashboard` (tableau de bord joueur)
 - [ ] Structure de pages et layout principal
 - [ ] Frontend des pages
+
+## Plan design
+- Utiliser **v0.dev** pour générer le design de la landing page, puis intégrer le code ici
+- Dashboard et pages internes à construire directement ici après la landing
 
 ## Notes dev
 - Désactiver "Confirm email" dans Supabase Auth pour le dev (à réactiver en prod avec SMTP)

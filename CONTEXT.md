@@ -52,13 +52,19 @@ Gestion des joueurs, matchs, classements, inscriptions et paiements.
 - [x] `src/lib/supabase.ts` — client Supabase basique (createClient)
 - [x] `.env.local` configuré
 - [x] Repo GitHub créé
+- [x] Clients Supabase SSR (`src/lib/supabase/server.ts` + `client.ts`)
+- [x] `src/proxy.ts` — session refresh + protection des routes (`/dashboard`, `/profil`, `/admin`)
+- [x] Pages d'auth (`/login`, `/signup`) + Server Actions (`login`, `signup`, `signout`)
 
 ### En cours / À faire
-- [ ] Clients Supabase SSR (`src/lib/supabase/server.ts` + `client.ts`)
-- [ ] `proxy.ts` — session refresh + protection des routes
-- [ ] Pages d'auth (login, signup) + Server Actions
+- [ ] Page `/dashboard` (tableau de bord joueur)
 - [ ] Structure de pages et layout principal
 - [ ] Frontend des pages
+
+## Notes dev
+- Désactiver "Confirm email" dans Supabase Auth pour le dev (à réactiver en prod avec SMTP)
+- Comptes créés avant désactivation sont "unconfirmed" → confirmer manuellement dans Supabase
+- Table `joueurs` : colonnes `prenom` ET `nom` séparées, toutes deux NOT NULL
 
 ## Décisions techniques prises
 - Utiliser `@supabase/ssr` avec `createServerClient` (getAll/setAll) côté serveur
